@@ -80,7 +80,7 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: username/taski_frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/taski_frontend:latest
   build_and_push_backend_to_docker_hub:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
